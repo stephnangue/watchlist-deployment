@@ -1,12 +1,13 @@
-def swarmManager = 'manager.sandbox.domain.com'
+def swarmManager = 'ec2-3-65-219-159.eu-central-1.compute.amazonaws.com'
 def region = 'eu-central-1'
+def swarmSshagentCredentials = 'swarm-sandbox'
 
 node('master'){
     stage('Checkout'){
         checkout scm
     }
 
-     sshagent (credentials: ['swarm-sandbox']){
+     sshagent (credentials: ["${swarmSshagentCredentials}"]){
          stage('Copy'){
             sh "scp -o StrictHostKeyChecking=no docker-compose.yml ec2-user@${swarmManager}:/home/ec2-user"
         }
