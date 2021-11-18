@@ -1,4 +1,4 @@
-def swarmManager = 'ec2-3-71-6-151.eu-central-1.compute.amazonaws.com'
+def swarmManager = 'ec2-3-121-206-200.eu-central-1.compute.amazonaws.com'
 def region = 'eu-central-1'
 def swarmSshagentCredentials = 'swarm-sandbox'
 
