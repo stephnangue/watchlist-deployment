@@ -11,6 +11,6 @@ node('master'){
     }
 
     stage('Deploy'){
-        sh '/home/ec2-user/bin/kubectl apply -f kubectl/deployments/'
+        sh 'kubectl apply -f kubectl/deployments/'
     }
 }
