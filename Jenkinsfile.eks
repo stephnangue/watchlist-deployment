@@ -13,6 +13,6 @@ node('master'){
     stage('Deploy'){
         sh 'curl -LO "https://amazon-eks.s3.us-west-2.amazonaws.com/1.21.2/2021-07-05/bin/linux/amd64/kubectl"'
         sh 'chmod u+x ./kubectl' 
-        sh './kubectl apply -f kubectl/deployments/'
+        sh './kubectl apply -f k8s/deployments/'
     }
 }
